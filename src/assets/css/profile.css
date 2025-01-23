@@ -1,0 +1,216 @@
+/* Mobile (phones, less than 768px */
+@media (max-width: 431px) {
+    /* Account Menu Modal */
+    .modal-menu {
+        display: flex;
+        gap: 2em;
+    }
+
+    .modal-menu .menu-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        background-image: url('../img/cave-2.JPG'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; 
+        max-width: 100%; 
+        position: relative; 
+        padding: 1em;
+        box-sizing: border-box;
+        height: 460px;
+    }
+
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    header .profile-container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 11;
+    }
+
+    .navigation i {
+        color: #fff;
+        border-radius: 50%; 
+        height: 30px;
+        width: 35px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center; 
+        background: #000;
+    }
+
+    .profile-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        box-sizing: border-box;
+        gap: 0.5em;
+    }
+
+    .profile-name {
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 5px;
+        text-shadow: 0 0 15px #000;
+    }
+
+    .profile-description {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-top: 5px;
+        font-weight: lighter;
+        display: flex;
+        flex-direction: column;
+        text-shadow: 0 0 15px #000;
+    }
+
+    .description {
+        height: 50px;
+        overflow: hidden;
+        transition: height 0.8s ease, opacity 1s ease;
+        opacity: 1;
+    }
+
+    .description.expanded {
+        height: 100px;
+        opacity: 1;
+    }
+
+    .see-more-btn {
+        color: #fff;
+        align-self: flex-end;
+        text-shadow: 0 0 15px #000;
+        user-select: none;
+    }
+
+    .profile-picture img {
+        width: 100%;
+        max-width: 105px;
+        aspect-ratio: 1 / 1; 
+        border-radius: 50%; 
+        object-fit: cover; 
+        margin-top: 15px; 
+        border: 3px solid #fff;
+        image-rendering: auto;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
+    }
+
+    .profile-buttons {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        text-shadow: 0 0 15px #000;
+    }
+
+    /* Display when visiting other profile */
+    .profile-buttons button {
+        outline: none;
+        width: 100px;
+        max-width: 100%;
+        padding: 0.5em;
+        border-radius: 50px;
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        display: none;
+    }
+
+    .profile-metrics {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border-radius: 10px;
+        background: #2B2D2E;
+        font-size: 12px;
+        margin-top: 15px;
+        text-shadow: 0 0 15px #000;
+    }
+
+    .metrics-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 1em;
+    }
+
+    .cta-container {
+        margin-top: 15px;
+    }
+
+    .photo-count, .video-count {
+        width: 150px;
+        height: 100px;
+        background: #000;
+        padding: 0.3em;
+        font-size: 11px;
+        border-radius: 35%;
+    }
+
+    .user-posts-container .videos {
+        display: none;
+    }
+
+    .user-post {
+        margin-top: 15px;
+        padding: 1em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .user-post .post img,
+    .user-post .post video {
+        width: 100%;
+        max-width: 190px;
+        height: 160px;
+        object-fit: initial;
+        border-radius: 15px;
+    }
+
+    .video-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .video-container i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .hide-play-icon {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
