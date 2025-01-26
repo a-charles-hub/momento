@@ -35,7 +35,6 @@
     .profile-heading {
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     .heading {
@@ -121,12 +120,12 @@
     .update-email-btn {
         align-self: flex-end;
         width: 100%;
-        max-width: 120px;
+        max-width: 130px;
         margin-top: 10px;
         font-size: 12px;
         background-color: #2B2D2E;
         border: none;
-        color: #fff;   
+        color: #ffffff;   
         height: 40px; 
     }
 
