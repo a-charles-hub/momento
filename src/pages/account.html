@@ -44,61 +44,55 @@
                 <button class="upload-profile-btn">Upload new picture</button>
             </div>
 
-            <div class="bio">
-                <span class="heading">Bio</span>
-                
-                <div class="form-group">
-                    <label for="">Add Bio</label>
-                    <textarea name="" placeholder="Add bio"></textarea>
-                </div>
-            </div>
-
-            <div class="name">
-                <span class="heading">Full name</span>
-                
-                <div class="row">
+            <form action="/submit" method="POST">
+                <div class="bio">
+                    <span class="heading">Bio</span>
                     <div class="form-group">
-                        <label for="first-name">First name</label>
-                        <input type="text">
-                    </div>
-    
-                    <div>
-                        <label for="last-name">Last name</label>
-                        <input type="text">
+                        <label for="bio">Add Bio</label>
+                        <textarea id="bio" name="bio" placeholder="Add bio"></textarea>
                     </div>
                 </div>
-            </div>
-
-            <div class="password">
-                <span class="heading">Password</span>
-                
-                <div class="row">
-                    <div class="form-group">
-                        <label for="first-name">Current password</label>
-                        <input type="password">
-                    </div>
-    
-                    <div>
-                        <label for="last-name">New password</label>
-                        <input type="password">
+            
+                <div class="name">
+                    <span class="heading">Full name</span>
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="first-name">First name</label>
+                            <input type="text" id="first-name" name="first_name">
+                        </div>
+                        <div>
+                            <label for="last-name">Last name</label>
+                            <input type="text" id="last-name" name="last_name">
+                        </div>
                     </div>
                 </div>
-
-                <button class="change-password-btn">Update password</button>
-            </div>
-
-            <div class="email">
-                <span class="heading">Contact email</span>
-                
-                <div class="group">
-                    <div class="form-group">
-                        <label for="first-name">Email</label>
-                        <input type="email">
+            
+                <div class="password">
+                    <span class="heading">Password</span>
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="current-password">Current password</label>
+                            <input type="password" id="current-password" name="current_password">
+                        </div>
+                        <div>
+                            <label for="new-password">New password</label>
+                            <input type="password" id="new-password" name="new_password">
+                        </div>
                     </div>
-    
-                    <button class="update-email-btn">Update email</button>
+                    <button type="submit" class="change-password-btn">Update password</button>
                 </div>
-            </div>
+            
+                <div class="email">
+                    <span class="heading">Contact email</span>
+                    <div class="group">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <button type="submit" class="update-email-btn">Update email</button>
+                    </div>
+                </div>
+            </form>
 
             <button class="apply-btn">Apply Changes</button>
         </div>
