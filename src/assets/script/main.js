@@ -169,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     };
 
+
     /** Initialize Functions */
     ctaToggle();
     addPost();
@@ -177,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     viewMediaPost();
     menuModal();
     modalHover();
+
 });
 
 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Momento | Gatu</title>
+    
+        <!-- Preload Material Icons Font -->
+        <link href="https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <!-- Material Icons CDN -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Google Icons CDN -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0&icon_names=cloud_upload" />
+        <!-- Montserrat Font CDN -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- Preload Font Awesome WOFF2 Font -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <!-- Font Awesome CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <!-- Local CSS -->
+        <link rel="stylesheet" href="../../src/assets/css/main.css">
+        <link rel="stylesheet" href="../../src/assets/css/account.css">
+    </head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <i class="fa-solid fa-arrow-left fa-lg" id="return-btn"></i>
+        </div>
+
+        <div class="account-heading">
+            <span>Account Info</span>
+
+            <div class="wrapper">
+                <div class="account">
+                    <img src="../../src/assets/img/chemks.jpg" alt="" loading="lazy">
+
+                    <div class="profile-heading">
+                        <span class="heading">Profile picture</span>
+                        <span class="sub-heading">PNG, JPEG under 10 MB</span>
+                    </div>
+                </div>
+
+                <button class="upload-profile-btn">Upload new picture</button>
+            </div>
+
+            <div class="bio">
+                <span class="heading">Bio</span>
+                
+                <div class="form-group">
+                    <label for="">Add Bio</label>
+                    <textarea name="" placeholder="Add bio"></textarea>
+                </div>
+            </div>
+
+            <div class="name">
+                <span class="heading">Full name</span>
+                
+                <div class="row">
+                    <div class="form-group">
+                        <label for="first-name">First name</label>
+                        <input type="text">
+                    </div>
+    
+                    <div>
+                        <label for="last-name">Last name</label>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="password">
+                <span class="heading">Password</span>
+                
+                <div class="row">
+                    <div class="form-group">
+                        <label for="first-name">Current password</label>
+                        <input type="password">
+                    </div>
+    
+                    <div>
+                        <label for="last-name">New password</label>
+                        <input type="password">
+                    </div>
+                </div>
+
+                <button class="change-password-btn">Update password</button>
+            </div>
+
+            <div class="email">
+                <span class="heading">Contact email</span>
+                
+                <div class="group">
+                    <div class="form-group">
+                        <label for="first-name">Email</label>
+                        <input type="email">
+                    </div>
+    
+                    <button class="update-email-btn">Update email</button>
+                </div>
+            </div>
+
+            <button class="apply-btn">Apply Changes</button>
+        </div>
+    </div>
+
+    <!-- Local JS -->
+    <script src="../assets/script/account.js" defer></script>
+</body>
+</html>

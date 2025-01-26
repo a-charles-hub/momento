@@ -113,10 +113,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    const account = () => { 
+        const account = document.getElementById('account');
+
+        account.addEventListener('click', () => {
+            window.location.href = "account.html";
+        })
+    }
  
     /** Initialize Functions */
     viewMore();
     returnToHome();
     ctaVideo();
     viewingPost();
+    account();
 });
