@@ -9,6 +9,7 @@ body {
     background-color: #1B1A1D;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
+    touch-action: pan-y;
 }
 
 ul {
@@ -42,7 +43,7 @@ ul a {
         align-items: center; 
         background: #000;
     }
-    
+
     /* Modal */
     .modal {
         display: flex;
