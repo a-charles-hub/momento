@@ -121,6 +121,14 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = "account.html";
         })
     }
+
+    const watch = () => {
+        const videos = document.querySelector('.videos');
+
+        videos.addEventListener('click', () => {
+            window.location.href = "watch.html";
+        })
+    }
  
     /** Initialize Functions */
     viewMore();
@@ -128,4 +136,5 @@ document.addEventListener('DOMContentLoaded', () => {
     ctaVideo();
     viewingPost();
     account();
+    watch();
 });
