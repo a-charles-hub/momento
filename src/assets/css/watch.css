@@ -1,0 +1,123 @@
+/* Ensure Material Icons font is applied */
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons&display=swap');
+
+body {
+    font-family: 'Material Icons', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1B1A1D;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+@media (max-width: 431px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        width: 100%;
+        height: 100%;
+        scroll-snap-type: y mandatory;
+    }
+    
+    .watch-video {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-type: y mandatory;
+    }
+    
+    .video {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        scroll-snap-align: start;
+    }
+    
+    .video-player {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow-y: scroll; 
+    }
+
+    .video-header {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+    }
+
+    .video-header * {
+        padding: 16px;
+    }
+
+    .video-side-icons {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%); 
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        color: white; 
+        font-size: 24px;
+        align-items: center;
+    }
+    
+    .video-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        padding: 16px;
+    }
+
+    .video-footer .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .video-footer .profile-info {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .video-footer .profile img {
+        width: 100%;
+        max-width: 50px;
+        aspect-ratio: 1 / 1; 
+        border-radius: 50%; 
+        object-fit: cover; 
+        image-rendering: crisp-edges;
+    }
+
+    .video-footer .description {
+        font-size: 12px;
+        font-weight: 100;
+        margin-top: 5px;
+    }
+
+    .video-footer .btn-follow {
+        border: none;
+        outline: none;
+        padding: 0.5em;
+        width: 50px;
+        background: #3D89F5;
+        color: #fff;
+        border-radius: 15px;
+        font-size: 10px;
+    }
+}
