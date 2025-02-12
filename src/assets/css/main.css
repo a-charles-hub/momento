@@ -436,19 +436,6 @@ ul a {
 
     /* Bottom Navbar */
     .bottom-navbar-container.sticky {
-        position: sticky;
-        bottom: 0;
-        width: 100%;
-        background: #000;
-        border-radius: 10px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        z-index: 10;
-        transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
-    }
-
-    .bottom-navbar-container.fixed {
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -458,7 +445,7 @@ ul a {
         display: flex;
         align-items: center;
         z-index: 10;
-        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
     }
 
     .bottom-navbar {

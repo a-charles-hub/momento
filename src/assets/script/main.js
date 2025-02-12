@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnExplore.classList.toggle('btn-inactive', !showExplore);
             btnDiscover.classList.toggle('btn-active', !showExplore);
             btnDiscover.classList.toggle('btn-inactive', showExplore);
-            bottomNavbar.classList.toggle('sticky', showExplore);
+            bottomNavbar.classList.toggle('fixed', showExplore);
             bottomNavbar.classList.toggle('fixed', !showExplore);
         };
 
