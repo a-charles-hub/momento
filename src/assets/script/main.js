@@ -169,6 +169,25 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     };
 
+    const hideBottomNavbar = () => {
+        const bottomNavbar = document.getElementById('bottom-navbar');
+        
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            if (lastScrollY < window.scrollY) {
+                console.log('Scrolling down');
+                bottomNavbar.classList.add('bottom-hidden');
+            } else {
+                console.log('Scrolling up');
+                bottomNavbar.classList.remove('bottom-hidden');
+            }
+
+            lastScrollY = window.scrollY;
+
+        })
+    }
+
 
     /** Initialize Functions */
     ctaToggle();
@@ -178,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     viewMediaPost();
     menuModal();
     modalHover();
-
+    hideBottomNavbar();
 });
 
 

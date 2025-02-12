@@ -445,6 +445,7 @@ ul a {
         display: flex;
         align-items: center;
         z-index: 10;
+        transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
     }
 
     .bottom-navbar-container.fixed {
@@ -457,6 +458,7 @@ ul a {
         display: flex;
         align-items: center;
         z-index: 10;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
 
     .bottom-navbar {
@@ -465,6 +467,11 @@ ul a {
         justify-content: space-around;
         width: 100%;
         gap: 7em;
+    }
+
+    .bottom-hidden {
+        transform: translateY(100%);
+        opacity: 0; /* Fade effect */
     }
 
     .home-btn {
