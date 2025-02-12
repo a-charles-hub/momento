@@ -171,22 +171,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const hideBottomNavbar = () => {
         const bottomNavbar = document.getElementById('bottom-navbar');
-        
         let lastScrollY = window.scrollY;
-
+    
         window.addEventListener('scroll', () => {
-            if (lastScrollY < window.scrollY) {
-                console.log('Scrolling down');
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+    
+            if (scrollY === 0) {
+                // Ensure navbar is visible at the top of the page
+                bottomNavbar.classList.remove('bottom-hidden');
+            } else if (scrollY + windowHeight >= documentHeight) {
+                // Prevent navbar from appearing due to bounce when reaching bottom
+                return;
+            } else if (lastScrollY < scrollY) {
+                // Scrolling down
                 bottomNavbar.classList.add('bottom-hidden');
             } else {
-                console.log('Scrolling up');
+                // Scrolling up
                 bottomNavbar.classList.remove('bottom-hidden');
             }
-
-            lastScrollY = window.scrollY;
-
-        })
-    }
+    
+            lastScrollY = scrollY;
+        });
+    };
 
 
     /** Initialize Functions */
