@@ -34,15 +34,10 @@ body {
     
     .video {
         width: 100%;
-        height: 100%;
+        height: 100dvh;
         position: relative;
         scroll-snap-align: start;
-    }
-
-    video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
+        object-fit: cover;
     }
     
     .video-player {
