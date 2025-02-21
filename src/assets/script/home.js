@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-
     /** Comments Modal */
     const commentsModal = () => {
         const comments = document.querySelectorAll('.fa-comments');

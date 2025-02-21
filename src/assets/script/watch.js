@@ -1,27 +1,56 @@
-// Select all video elements
-const videos = document.querySelectorAll('.video-player');
+document.addEventListener('DOMContentLoaded', () => {
+    /** Play Video */
+    const playVideo = () => {
+        // Select all video elements
+        const videos = document.querySelectorAll('.video-player');
 
-// Create an IntersectionObserver to monitor the videos
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        const video = entry.target;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const video = entry.target;
 
-        // Check if the video is in view (intersection ratio greater than 0)
-        if (entry.isIntersecting) {
-            // Reset the video and play it when it comes into view
-            video.currentTime = 0; // Reset the video to the start
-            video.muted = false; // Unmute the video when it plays
-            video.play(); // Start playing the video from the beginning
-        } else {
-            // Pause the video when it is out of view
-            video.pause();
-        }
-    });
-}, {
-    threshold: 0.5  // The video will start playing when 50% of it is visible
-});
+                if (entry.isIntersecting) {
+                    video.currentTime = 0;
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
 
-// Observe each video element
-videos.forEach(video => {
-    observer.observe(video);
+        videos.forEach(video => {
+            observer.observe(video);
+        });
+
+        // Optional: Allow users to toggle sound manually
+        videos.forEach(video => {
+            video.addEventListener('click', () => {
+                video.muted = !video.muted;
+            });
+        });
+    }
+
+    /** Return to Home */
+    const bottomNavigation = () => {
+        const home = document.getElementById('home-btn');
+        const arrowBack = document.getElementById('arrow-btn');
+        const userProfile = document.getElementById('user-profile-btn');
+
+        home.addEventListener('click', () => {
+            window.location.href = "home.html";
+        })
+
+        arrowBack.addEventListener('click', () => {
+            window.location.href = "profile.html";
+        })
+
+        userProfile.addEventListener('click', () => {
+            window.location.href = "profile.html";
+        })
+    }
+
+    /** Initialize Functions */
+    playVideo();
+    bottomNavigation();
 });

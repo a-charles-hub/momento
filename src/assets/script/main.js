@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addPost();
     scrollToTop();
     viewProfile();
-    viewMediaPost();
+    //viewMediaPost();
     menuModal();
     modalHover();
     hideBottomNavbar();

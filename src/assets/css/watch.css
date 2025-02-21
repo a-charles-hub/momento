@@ -10,54 +10,83 @@ body {
     box-sizing: border-box;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
 @media (max-width: 431px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
     html, body {
+        height: 100dvh;
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+
+    .container {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .video-header *,
+    .container .bottom-nav {
+        padding: 16px;
+    }
+
+    .video-reels {
+        position: fixed;
+        flex: 1;
+        overflow-y: scroll;
         scroll-snap-type: y mandatory;
+        -webkit-overflow-scrolling: touch; 
+        z-index: 1000;
+        height: calc(100dvh - 50px);
+        width: 100vw;
     }
     
     .watch-video {
-        width: 100vw;
-        height: 100vh;
+        position: relative;
+        width: 100%;
+        height: calc(100dvh - 50px);
+        min-height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        scroll-snap-type: y mandatory;
+        scroll-snap-align: start;
     }
-    
+
     .video {
         width: 100%;
-        height: 100dvh;
+        height: 100%;
         position: relative;
-        scroll-snap-align: start;
         object-fit: cover;
+        
     }
     
     .video-player {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        overflow-y: scroll; 
+        display: block; 
     }
 
     .video-header {
-        position: absolute;
+        position: fixed;
+        top: 0;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         color: #fff;
-    }
-
-    .video-header * {
-        padding: 16px;
+        z-index: 100;
     }
 
     .video-side-icons {
@@ -71,6 +100,7 @@ body {
         color: white; 
         font-size: 24px;
         align-items: center;
+        z-index: 1000;
     }
     
     .video-footer {
@@ -120,5 +150,46 @@ body {
         color: #fff;
         border-radius: 15px;
         font-size: 10px;
+    }
+
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #1B1A1D;
+        color: #fff;
+        z-index: 1000;
+        margin-top: 20px;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-btn {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        max-width: 100%;
+    }
+
+    .nav-btn button {
+        border: none;
+        outline: none;
+        background: none;
+        padding: 0.5em;
+    }
+
+    .nav-btn button i {
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .nav-btn button img {
+        width: 35px;
+        min-width: 100%;
+        height: 35px;
+        min-height: 100%;
+        border-radius: 50%;
     }
 }
